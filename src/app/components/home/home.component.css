@@ -1,0 +1,21 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.mat-grid-list {
+  width: 100vw; /* fill the entire viewport width */
+  height: 100vh; /* fill the entire viewport height */
+}
+
+.mat-grid-tile {
+  /* Adding a little bit of padding to see the tiles separately, adjust as needed */
+  padding: 10px;
+}
+
+
+mat-grid-tile {
+  background: lightblue;
+}
+
