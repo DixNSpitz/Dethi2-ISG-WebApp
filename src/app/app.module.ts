@@ -11,6 +11,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatGridListModule} from "@angular/material/grid-list";
 import { GamesComponent } from './components/games/games.component';
 import { TipsComponent } from './components/tips/tips.component';
+import { HumidityGameComponent } from './components/games/humidity-game/humidity-game.component';
+import { MultipleChoiceGameComponent } from './components/games/multiple-choice-game/multiple-choice-game.component';
+import { OrderGameComponent } from './components/games/order-game/order-game.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { TipsComponent } from './components/tips/tips.component';
     AboutComponent,
     VitalsComponent,
     GamesComponent,
-    TipsComponent
+    TipsComponent,
+    HumidityGameComponent,
+    MultipleChoiceGameComponent,
+    OrderGameComponent
   ],
   imports: [
     BrowserModule,
