@@ -7,8 +7,10 @@ import {VitalsComponent} from "../components/vitals/vitals.component";
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },  // default route
   { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
   { path: 'vitals', component: VitalsComponent },
+  { path: 'games', component: GamesComponent },
+  { path: 'tips', component: TipsComponent },
+  { path: 'about', component: AboutComponent },
   // { path: 'game', component: Game1Component },
   // { path: 'game2', component: Game2Component },
 
