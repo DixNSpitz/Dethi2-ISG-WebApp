@@ -9,13 +9,17 @@ import { AboutComponent } from './components/about/about.component';
 import { VitalsComponent } from './components/vitals/vitals.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatGridListModule} from "@angular/material/grid-list";
+import { GamesComponent } from './components/games/games.component';
+import { TipsComponent } from './components/tips/tips.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    VitalsComponent
+    VitalsComponent,
+    GamesComponent,
+    TipsComponent
   ],
   imports: [
     BrowserModule,
