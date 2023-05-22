@@ -3,6 +3,8 @@ import {RouterModule, Routes} from "@angular/router";
 import {HomeComponent} from "../components/home/home.component";
 import {AboutComponent} from "../components/about/about.component";
 import {VitalsComponent} from "../components/vitals/vitals.component";
+import {TipsComponent} from "../components/tips/tips.component";
+import {GamesComponent} from "../components/games/games.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },  // default route
@@ -11,9 +13,6 @@ const routes: Routes = [
   { path: 'games', component: GamesComponent },
   { path: 'tips', component: TipsComponent },
   { path: 'about', component: AboutComponent },
-  // { path: 'game', component: Game1Component },
-  // { path: 'game2', component: Game2Component },
-
   // { path: '**', component: NotFoundComponent }  // wildcard route for 404 not found
 ];
 
