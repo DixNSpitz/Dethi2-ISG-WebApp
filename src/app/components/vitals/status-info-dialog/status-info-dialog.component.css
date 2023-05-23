@@ -1,0 +1,32 @@
+.dialog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+.close-button {
+  align-self: flex-end;
+  color: #999;
+}
+.status-info {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 1.2em;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.status-smiley {
+  font-size: 2em;
+  margin-right: 20px;
+}
+.status-text {
+  flex-grow: 1;
+}
