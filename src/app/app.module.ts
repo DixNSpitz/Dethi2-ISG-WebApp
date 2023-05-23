@@ -15,6 +15,9 @@ import { HumidityGameComponent } from './components/games/humidity-game/humidity
 import { MultipleChoiceGameComponent } from './components/games/multiple-choice-game/multiple-choice-game.component';
 import { OrderGameComponent } from './components/games/order-game/order-game.component';
 import {MatButtonModule} from "@angular/material/button";
+import { StatusInfoDialogComponent } from './components/vitals/status-info-dialog/status-info-dialog.component';
+import {MatIconModule} from "@angular/material/icon";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import {MatButtonModule} from "@angular/material/button";
     TipsComponent,
     HumidityGameComponent,
     MultipleChoiceGameComponent,
-    OrderGameComponent
+    OrderGameComponent,
+    StatusInfoDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,9 @@ import {MatButtonModule} from "@angular/material/button";
     AppRoutingModule,
     BrowserAnimationsModule,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
