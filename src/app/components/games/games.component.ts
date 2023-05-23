@@ -14,4 +14,8 @@ export class GamesComponent {
   navigateToGame(gameRoute: string) {
     this.router.navigate([`/games/${gameRoute}`]);
   }
+
+  routeBack() {
+    this.router.navigate([`/home`]);
+  }
 }

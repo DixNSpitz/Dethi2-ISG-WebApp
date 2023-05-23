@@ -14,6 +14,7 @@ import { TipsComponent } from './components/tips/tips.component';
 import { HumidityGameComponent } from './components/games/humidity-game/humidity-game.component';
 import { MultipleChoiceGameComponent } from './components/games/multiple-choice-game/multiple-choice-game.component';
 import { OrderGameComponent } from './components/games/order-game/order-game.component';
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { OrderGameComponent } from './components/games/order-game/order-game.com
     RouterOutlet,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

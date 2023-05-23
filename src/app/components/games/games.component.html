@@ -4,6 +4,8 @@
     <div class="grid-item" (click)="navigateToGame('multipleChoice')">2. Multiple Choice</div>
     <div class="grid-item" (click)="navigateToGame('order')">3. Reihenfolge</div>
   </div>
-
+  <div class="button-container">
+    <button mat-fab extended (click)="routeBack()">Zurück</button>
+  </div>
 </div>
 <router-outlet></router-outlet>
