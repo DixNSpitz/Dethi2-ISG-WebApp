@@ -1,1 +1,17 @@
-<p>tips works!</p>
+<div class="container">
+  <h1 class="title">Tipps fürs Gärtnern</h1>
+  <div class="tips-grid">
+    <div class="grid-item" (click)="playInfo('tomato')">Tomate</div>
+    <div class="grid-item" (click)="playInfo('chili')">Chili</div>
+    <div class="grid-item" (click)="playInfo('aloe')">Aloe Vera</div>
+    <div class="grid-item" (click)="playInfo('illness')">Krankheiten</div>
+    <div class="grid-item" (click)="playInfo('place')">Stellplatz</div>
+    <div class="grid-item" (click)="playInfo('water')">Wasserbedarf</div>
+    <div class="grid-item" (click)="playInfo('fertilizer')">Dünger</div>
+    <div class="grid-item" (click)="playInfo('...')">Weitere Info</div>
+    <div class="grid-item" (click)="playInfo('...')">Weitere Info</div>
+  </div>
+  <div class="button-container">
+    <button mat-fab extended class="back-button" routerLink="/home">Zurück</button>
+  </div>
+</div>

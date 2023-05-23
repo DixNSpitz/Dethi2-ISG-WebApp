@@ -1,0 +1,51 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  height: calc(100% - 20px);
+  width: calc(100% - 40px);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 2em; /* adjust as needed */
+  margin-bottom: 20px; /* adjust as needed */
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.grid-item {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  transition: background-color 0.3s;
+}
+
+.grid-item:hover {
+  background-color: #ddd;
+}
+
+.button-container {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+

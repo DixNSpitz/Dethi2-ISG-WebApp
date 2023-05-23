@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class TipsComponent {
 
+  playInfo(audioKey: string) {
+    // send request to server so audio plays
+    // make sure to implement some kind of buffer so that the server doesn't get overloaded
+    console.log('audio is playing for: ', audioKey);
+  }
 }
