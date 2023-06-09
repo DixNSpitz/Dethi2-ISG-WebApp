@@ -10,9 +10,7 @@ import {Day} from "../../../models/Day";
 export class StatusInfoDialogComponent {
 
   constructor(public dialogRef: MatDialogRef<StatusInfoDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: {day: Day}) {
-    console.log(data.day)
-  }
+              @Inject(MAT_DIALOG_DATA) public data: {day: Day}) {}
 
   closeDialog() {
     this.dialogRef.close();
