@@ -2,8 +2,16 @@
   <button mat-icon-button class="close-button" (click)="closeDialog()">
     <mat-icon>close</mat-icon>
   </button>
-  <div class="status-info" *ngFor="let info of statusInfos">
-    <span class="status-smiley">{{ info.smiley }}</span>
-    <span class="status-text">{{ info.text }}</span>
+  <div class="status-info">
+    <span class="status-smiley">{{ '😊' }}</span>
+    <span class="status-text">{{  data.day.water_value }}</span>
+  </div>
+  <div class="status-info">
+    <span class="status-smiley">{{ '😐' }}</span>
+    <span class="status-text">{{ data.day.light_value }}</span>
+  </div>
+  <div class="status-info">
+    <span class="status-smiley">{{ '😊' }}</span>
+    <span class="status-text">{{ data.day.temperature_value }}</span>
   </div>
 </div>

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import {MatDialogRef} from "@angular/material/dialog";
+import {Component, Inject} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {Day} from "../../../models/Day";
 
 @Component({
   selector: 'app-status-info-dialog',
@@ -7,13 +8,11 @@ import {MatDialogRef} from "@angular/material/dialog";
   styleUrls: ['./status-info-dialog.component.css']
 })
 export class StatusInfoDialogComponent {
-  statusInfos = [
-    { smiley: '😊', text: '~70%nFk' },
-    { smiley: '😐', text: '~20 Grad' },
-    { smiley: '😊', text: '~3lm' }
-  ];
 
-  constructor(public dialogRef: MatDialogRef<StatusInfoDialogComponent>) {}
+  constructor(public dialogRef: MatDialogRef<StatusInfoDialogComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: {day: Day}) {
+    console.log(data.day)
+  }
 
   closeDialog() {
     this.dialogRef.close();
