@@ -1,34 +1,15 @@
 <div class="container">
   <h1 class="title">So geht es den Pflanzen</h1>
-  <div class="plant-grid">
-    <div class="grid-item">
-      <span class="plant-name">Tomate</span>
+  <div class="plant-grid" *ngIf="plants">
+    <div class="grid-item" *ngFor="let plant of plants">
+      <span class="plant-name">{{plant.name}}</span>
       <div class="plant-status">
-        <div class="status-item" *ngFor="let day of displayedDays" (click)="openInfoDialog()">
+        <div class="status-item" *ngFor="let day of plant.days" (click)="openInfoDialog(day)">
           <span>😊</span>
-          <span>{{ day }}</span>
+          <span>{{ day.name }}</span>
         </div>
       </div>
     </div>
-    <div class="grid-item">
-      <span class="plant-name">Chili</span>
-      <div class="plant-status">
-        <div class="status-item" *ngFor="let day of displayedDays" (click)="openInfoDialog()">
-          <span>😊</span>
-          <span>{{ day }}</span>
-        </div>
-      </div>
-    </div>
-    <div class="grid-item">
-      <span class="plant-name">Aloe Vera</span>
-      <div class="plant-status">
-        <div class="status-item" *ngFor="let day of displayedDays" (click)="openInfoDialog()">
-          <span>😊</span>
-          <span>{{ day }}</span>
-        </div>
-      </div>
-    </div>
-    <!-- Similarly for other plants -->
   </div>
   <div class="button-container">
     <button mat-fab extended routerLink="/home">Zurück</button>
