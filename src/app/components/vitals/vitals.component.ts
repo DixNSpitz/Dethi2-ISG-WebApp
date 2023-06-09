@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {StatusInfoDialogComponent} from "./status-info-dialog/status-info-dialog.component";
+import {VitalsService} from "../../services/vitals.service";
+import {Plant} from "../../models/Plant";
+import {Day} from "../../models/Day";
 
 @Component({
   selector: 'app-vitals',
@@ -10,9 +13,11 @@ import {StatusInfoDialogComponent} from "./status-info-dialog/status-info-dialog
 export class VitalsComponent implements OnInit {
   weekDays = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
   displayedDays: string[] = [];
+  plants: Plant[] = [];
 
   constructor(
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private vitalsService: VitalsService
   ) {
   }
 
@@ -21,10 +26,15 @@ export class VitalsComponent implements OnInit {
     for (let i = 0; i < 7; i++) {
       this.displayedDays.unshift(this.weekDays[(today - i + 7) % 7]);
     }
-  }
+    this.vitalsService.getAllVitals().subscribe((plants: Plant[]) => {
+      this.plants = plants;
+    });
+  };
 
-  openInfoDialog() {
-    this.dialog.open(StatusInfoDialogComponent);
+  openInfoDialog(day: Day) {
+    this.dialog.open(StatusInfoDialogComponent, {
+      data: {day: day}
+    });
   }
 
 
