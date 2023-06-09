@@ -18,6 +18,7 @@ import {MatButtonModule} from "@angular/material/button";
 import { StatusInfoDialogComponent } from './components/vitals/status-info-dialog/status-info-dialog.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatDialogModule} from "@angular/material/dialog";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
