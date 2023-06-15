@@ -1,9 +1,12 @@
 <div class="container">
   <div class="main-grid">
-    <h1 class="title">Spiele</h1>
-    <div class="grid-item" (click)="navigateToGame('humidity')">1. Schätze die Bodenfeuchtigkeit der Chilipflanze ein</div>
-    <div class="grid-item" (click)="navigateToGame('multipleChoice')">2. Multiple Choice</div>
-    <div class="grid-item" (click)="navigateToGame('order')">3. Reihenfolge</div>
+    <div class="header-wrapper">
+      <img src="assets/LogoAlone.png" alt="" class="logo">
+      <p class="title">Spiel wählen</p>
+    </div>
+    <div class="grid-item" (click)="navigateToGame('humidity')">Pflanzen verstehen lernen</div>
+    <div class="grid-item" (click)="navigateToGame('multipleChoice')">Pflanzenquiz</div>
+    <div class="grid-item" (click)="navigateToGame('order')">Pflanzen in Reihenfolge bringen</div>
   </div>
   <div class="button-container">
     <button mat-fab extended (click)="routeBack()">Zurück</button>
