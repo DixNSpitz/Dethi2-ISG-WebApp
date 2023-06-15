@@ -1,0 +1,28 @@
+.info-dialog {
+  position: relative;
+  padding: 20px;
+  width: 200px; /* Adjust as needed */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.info-dialog-arrow {
+  position: absolute;
+  left: -20px; /* Position of the arrow */
+  top: 10px; /* Position of the arrow */
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: #fff; /* Color of the arrow */
+  border-left: 0;
+  margin-top: 5px;
+  margin-left: 1px;
+}
+
+.close-button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
