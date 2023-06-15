@@ -22,6 +22,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { SharedGameComponent } from './components/games/shared-game/shared-game.component';
 import { BackButtonComponent } from './components/shared/back-button/back-button.component';
 import { HeaderComponent } from './components/shared/header/header.component';
+import { InfoDialogComponent } from './components/home/info-dialog/info-dialog.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HeaderComponent } from './components/shared/header/header.component';
     StatusInfoDialogComponent,
     SharedGameComponent,
     BackButtonComponent,
-    HeaderComponent
+    HeaderComponent,
+    InfoDialogComponent
   ],
   imports: [
     BrowserModule,
