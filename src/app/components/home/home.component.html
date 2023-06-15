@@ -4,4 +4,13 @@
     <div class="grid-item" (click)="navigateToRoute('games')">Spiele</div>
     <div class="grid-item" (click)="navigateToRoute('tips')">Tipps fürs Gärtnern</div>
   </div>
+  <div class="button-container">
+    <img
+      class="info-icon"
+      src="assets/Information_Manual_Icon.png"
+      alt="Informations Icon"
+      (click)="openInfoDialog()"
+      #infoButton
+    >
+  </div>
 </div>

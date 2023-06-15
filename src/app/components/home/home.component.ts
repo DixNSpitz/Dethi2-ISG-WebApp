@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
+import {InfoDialogComponent} from "./info-dialog/info-dialog.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-home',
@@ -7,11 +9,23 @@ import {Router} from "@angular/router";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  @ViewChild('infoButton', { static: true }) backButton: ElementRef = new ElementRef<any>(null);
 
-  constructor(private router: Router) { }
+
+  constructor(private router: Router, public dialog: MatDialog) { }
 
   navigateToRoute(route: string) {
     console.log("navigateToRoute() called with route: " + route);
     this.router.navigate([route]);
   }
+
+  openInfoDialog() {
+    const rect = this.backButton.nativeElement.getBoundingClientRect();
+    const dialogPosition = { top: (rect.top - 100) + 'px', left: (rect.left + rect.width + 10) + 'px' };
+
+    this.dialog.open(InfoDialogComponent, {
+      position: dialogPosition
+    });
+  }
+
 }
