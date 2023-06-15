@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Manrope:300,400,500,600,800&display=swap');
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Manrope, sans-serif;
   overflow:hidden;
 }
 
@@ -11,4 +12,19 @@ html, body, app-root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+
+}
+
+.header-wrapper > * {
+  padding: 10px;
 }
