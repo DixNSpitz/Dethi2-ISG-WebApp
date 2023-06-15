@@ -51,14 +51,3 @@ html, body {
   margin: auto; /* To center align */
 }
 
-
-
-.button-container {
-  padding: 20px;
-  display: flex;
-  justify-content: flex-start;
-  position: fixed; /* make it fixed */
-  bottom: 0; /* set its position at bottom */
-  left: 0; /* set its position at left */
-}
-
