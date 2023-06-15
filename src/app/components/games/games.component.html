@@ -1,16 +1,15 @@
 <div class="container">
-  <div class="header-wrapper">
-    <img src="assets/LogoAlone.png" alt="" class="logo">
-    <p class="title"><b>Spiel</b> wählen</p>
-  </div>
+  <app-header
+    imagePath="assets/LogoAlone.png"
+    textBold="Spiel"
+    text="wählen"
+  ></app-header>
   <div class="main-grid">
     <div class="grid-item" (click)="navigateToGame('humidity')">Pflanzen verstehen lernen / Schätzen</div>
     <div class="grid-item" (click)="navigateToGame('multipleChoice')">Pflanzenquiz (= Multiple Choice)</div>
     <div class="grid-item" (click)="navigateToGame('order')">Pflanzen in Reihenfolge bringen</div>
   </div>
   <img class="smiley" src="assets/Smileys_test.png" alt="Bild mit Pflanzen Smileys">
-
-    <app-back-button (click)="routeBack()"></app-back-button>
-
+  <app-back-button (click)="routeBack()"></app-back-button>
 </div>
 <router-outlet></router-outlet>
