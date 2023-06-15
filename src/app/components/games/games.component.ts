@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Router} from "@angular/router";
+import {GamesService} from "../../services/games.service";
 
 @Component({
   selector: 'app-games',
@@ -8,10 +9,11 @@ import {Router} from "@angular/router";
 })
 export class GamesComponent {
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private gamesService: GamesService) {
   }
 
   navigateToGame(gameRoute: string) {
+    this.gamesService.startGame(gameRoute).subscribe();
     this.router.navigate([`/games/${gameRoute}`]);
   }
 
