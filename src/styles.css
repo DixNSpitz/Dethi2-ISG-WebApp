@@ -22,7 +22,8 @@ html, body, app-root {
 .header-wrapper {
   display: flex;
   align-items: center;
-
+  padding-left: 5%;
+  font-size: 2em;
 }
 
 .header-wrapper > * {
