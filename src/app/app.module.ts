@@ -19,6 +19,7 @@ import { StatusInfoDialogComponent } from './components/vitals/status-info-dialo
 import {MatIconModule} from "@angular/material/icon";
 import {MatDialogModule} from "@angular/material/dialog";
 import {HttpClientModule} from "@angular/common/http";
+import { SharedGameComponent } from './components/games/shared-game/shared-game.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {HttpClientModule} from "@angular/common/http";
     HumidityGameComponent,
     MultipleChoiceGameComponent,
     OrderGameComponent,
-    StatusInfoDialogComponent
+    StatusInfoDialogComponent,
+    SharedGameComponent
   ],
   imports: [
     BrowserModule,
