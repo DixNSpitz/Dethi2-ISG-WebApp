@@ -4,14 +4,14 @@
   </button>
   <div class="status-info">
     <span class="status-smiley">{{ '😊' }}</span>
-    <span class="status-text">{{  data.day.water_value }}</span>
+    <span class="status-text">{{  data.day.water_value || "Keine Daten Gefunden"}} </span>
   </div>
   <div class="status-info">
     <span class="status-smiley">{{ '😐' }}</span>
-    <span class="status-text">{{ data.day.light_value }}</span>
+    <span class="status-text">{{ data.day.light_value || "Keine Daten Gefunden"}}</span>
   </div>
   <div class="status-info">
     <span class="status-smiley">{{ '😊' }}</span>
-    <span class="status-text">{{ data.day.temperature_value }}</span>
+    <span class="status-text">{{ data.day.temperature_value || "Keine Daten Gefunden"}}</span>
   </div>
 </div>
