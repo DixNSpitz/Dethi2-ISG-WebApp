@@ -17,30 +17,48 @@ html, body {
 .main-grid {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
   flex: 1;
 }
 
 .grid-item {
-  padding: 20px;
-  border: 1px solid #ccc;
-  flex: 1;
-  background-color: #f2f2f2;
+  flex: 1 1 0;
+  margin: 5% 15px 15px;
+  background-color: #89C839;
   text-align: center;
   font-size: 1.5em;
+  color: #ffffff; /* Change the font color to white */
   transition: background-color 0.3s;
-  display: flex; /* Add these */
-  justify-content: center; /* Add these */
-  align-items: center; /* Add these */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .grid-item:hover {
   background-color: #ddd;
 }
 
+.smiley {
+  height: 50vh; /* 40% of the viewport height */
+  width: auto;  /* maintain aspect ratio */
+  object-fit: contain; /* ensure image doesn't stretch */
+  display: block; /* To center align */
+  margin: auto; /* To center align */
+}
+
+
+
 .button-container {
   padding: 20px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  position: fixed; /* make it fixed */
+  bottom: 0; /* set its position at bottom */
+  left: 0; /* set its position at left */
 }
+

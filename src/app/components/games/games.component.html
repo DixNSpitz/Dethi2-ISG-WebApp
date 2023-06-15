@@ -1,15 +1,16 @@
 <div class="container">
+  <div class="header-wrapper">
+    <img src="assets/LogoAlone.png" alt="" class="logo">
+    <p class="title"><b>Spiel</b> wählen</p>
+  </div>
   <div class="main-grid">
-    <div class="header-wrapper">
-      <img src="assets/LogoAlone.png" alt="" class="logo">
-      <p class="title">Spiel wählen</p>
-    </div>
-    <div class="grid-item" (click)="navigateToGame('humidity')">Pflanzen verstehen lernen</div>
-    <div class="grid-item" (click)="navigateToGame('multipleChoice')">Pflanzenquiz</div>
+    <div class="grid-item" (click)="navigateToGame('humidity')">Pflanzen verstehen lernen / Schätzen</div>
+    <div class="grid-item" (click)="navigateToGame('multipleChoice')">Pflanzenquiz (= Multiple Choice)</div>
     <div class="grid-item" (click)="navigateToGame('order')">Pflanzen in Reihenfolge bringen</div>
   </div>
+  <img class="smiley" src="assets/Smileys_test.png" alt="Bild mit Pflanzen Smileys">
   <div class="button-container">
-    <button mat-fab extended (click)="routeBack()">Zurück</button>
+    <app-back-button (click)="routeBack()"></app-back-button>
   </div>
 </div>
 <router-outlet></router-outlet>
