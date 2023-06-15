@@ -20,6 +20,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatDialogModule} from "@angular/material/dialog";
 import {HttpClientModule} from "@angular/common/http";
 import { SharedGameComponent } from './components/games/shared-game/shared-game.component';
+import { BackButtonComponent } from './components/shared/back-button/back-button.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SharedGameComponent } from './components/games/shared-game/shared-game.
     MultipleChoiceGameComponent,
     OrderGameComponent,
     StatusInfoDialogComponent,
-    SharedGameComponent
+    SharedGameComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,
