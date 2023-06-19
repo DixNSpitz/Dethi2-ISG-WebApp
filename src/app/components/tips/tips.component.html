@@ -1,17 +1,38 @@
 <div class="container">
-  <h1 class="title">Tipps fürs Gärtnern</h1>
-  <div class="tips-grid">
-    <div class="grid-item" (click)="playInfo('tomato')">Tomate</div>
-    <div class="grid-item" (click)="playInfo('chili')">Chili</div>
-    <div class="grid-item" (click)="playInfo('aloe')">Aloe Vera</div>
-    <div class="grid-item" (click)="playInfo('illness')">Krankheiten</div>
-    <div class="grid-item" (click)="playInfo('place')">Stellplatz</div>
-    <div class="grid-item" (click)="playInfo('water')">Wasserbedarf</div>
-    <div class="grid-item" (click)="playInfo('fertilizer')">Dünger</div>
-    <div class="grid-item" (click)="playInfo('...')">Weitere Info</div>
-    <div class="grid-item" (click)="playInfo('...')">Weitere Info</div>
+  <app-header
+    imagePath="assets/LogoAlone.png"
+    textBold="Tipps"
+    text=" fürs Gärtnern"
+  ></app-header>
+  <div class="tips-container">
+    <div class="tips-grid-item" (click)="routeToInfo('tomato')">
+      <img class="tips-image" src="assets/Tomato.png" alt="tomato"/>
+      <div class="grid-item-text">Tomate</div>
+    </div>
+    <div class="tips-grid-item" (click)="routeToInfo('chili')">
+      <img class="tips-image" src="assets/Chilli.png" alt="tomato"/>
+      <div class="grid-item-text">Chili</div>
+    </div>
+    <div class="tips-grid-item" (click)="routeToInfo('aloe')">
+      <img class="tips-image" src="assets/Aloe%20Vera.png"
+           alt="tomato"/>
+      <div class="grid-item-text">Aloe Vera</div>
+    </div>
+    <div class="tips-grid-item" (click)="routeToInfo('illness')">
+      <img class="tips-image" src="assets/.png"
+           alt="tomato"/>
+      <div class="grid-item-text">Krankheit</div>
+    </div>
+    <div class="tips-grid-item" (click)="routeToInfo('fertilizer')">
+      <img class="tips-image" src="assets/soil.png"
+           alt="tomato"/>
+      <div class="grid-item-text">Dünger</div>
+    </div>
+    <div class="tips-grid-item" (click)="routeToInfo('water')">
+      <img class="tips-image" src="assets/watering.png"
+           alt="tomato"/>
+      <div class="grid-item-text">Wasserbedarf</div>
+    </div>
   </div>
-  <div class="button-container">
-    <button mat-fab extended class="back-button" routerLink="/home">Zurück</button>
-  </div>
+  <app-back-button class="tips-back-button" routerLink="/home"></app-back-button>
 </div>
