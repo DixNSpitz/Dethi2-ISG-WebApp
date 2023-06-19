@@ -47,24 +47,24 @@ html, body, app-root {
   flex: 1;
 }
 
-.grid-item {
-  flex: 1 1 0;
-  margin: 5% 15px 15px;
-  background-color: #89C839;
-  height: 100px;
-  text-align: center;
-  font-size: 1.5em;
-  color: #ffffff; /* Change the font color to white */
-  transition: background-color 0.3s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
+  .grid-item {
+    flex: 1 1 0;
+    margin: 5% 15px 15px;
+    background-color: #89C839;
+    height: 100px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #ffffff; /* Change the font color to white */
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
-.grid-item:hover {
-  background-color: #ddd;
-}
+  .grid-item:hover {
+    background-color: #ddd;
+  }
