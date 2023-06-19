@@ -10,10 +10,15 @@ import {GamesService} from "../../services/games.service";
 export class GamesComponent {
 
   constructor(private router: Router, private gamesService: GamesService) {
+    this.gamesService.getGameState().subscribe((data: any) => {
+      console.log(data);
+    });
   }
 
   navigateToGame(gameRoute: string) {
-    this.gamesService.startGame(gameRoute).subscribe();
+    this.gamesService.startGame(gameRoute).subscribe(res => {
+      console.log("Game started: ", res);
+    });
     this.router.navigate([`/games/${gameRoute}`]);
   }
 
