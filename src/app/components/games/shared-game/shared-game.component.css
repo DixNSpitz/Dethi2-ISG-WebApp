@@ -1,0 +1,20 @@
+.smiley {
+  height: 50vh; /* 40% of the viewport height */
+  width: auto;  /* maintain aspect ratio */
+  object-fit: contain; /* ensure image doesn't stretch */
+  position: fixed; /* Make it not be affected by other elements */
+  top: 50%; /* Position at the middle */
+  right: 5%; /* Position at the right */
+  transform: translateY(-50%); /* Ensure middle alignment */
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* take the full height of the viewport */
+}
+
+.abort-game-button {
+  margin: 5% 30% 15px;
+}
