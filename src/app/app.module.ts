@@ -23,6 +23,7 @@ import { SharedGameComponent } from './components/games/shared-game/shared-game.
 import { BackButtonComponent } from './components/shared/back-button/back-button.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { InfoDialogComponent } from './components/home/info-dialog/info-dialog.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { InfoDialogComponent } from './components/home/info-dialog/info-dialog.c
     MatIconModule,
     MatDialogModule,
     HttpClientModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
