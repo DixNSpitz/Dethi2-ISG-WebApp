@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'vitals', component: VitalsComponent},
   {path: 'games', component: GamesComponent},
   {path: 'games/humidity', component: HumidityGameComponent},
-  {path: 'games/multipleChoice', component: MultipleChoiceGameComponent},
+  {path: 'games/multiple', component: MultipleChoiceGameComponent},
   {path: 'games/order', component: OrderGameComponent},
   {path: 'tips', component: TipsComponent},
   {path: 'about', component: AboutComponent},
