@@ -1,1 +1,15 @@
-<h1><b>Spiel: </b> {{gameName}}</h1>
+<div class="container">
+  <app-header
+    imagePath="assets/LogoAlone.png"
+    textBold="Spiel"
+    text=' "{{gameName}}"'>
+  </app-header>
+
+  <div class="spinner-container">
+    <mat-spinner color="green"></mat-spinner>
+  </div>
+
+  <img src="assets/aloeverasmiley.png" alt="Pflanzen Smiley" class="smiley">
+
+  <div class="grid-item abort-game-button" (click)="abortGame()">Spiel abbrechen</div>
+</div>
