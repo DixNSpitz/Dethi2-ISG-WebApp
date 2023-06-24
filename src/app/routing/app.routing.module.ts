@@ -8,6 +8,7 @@ import {GamesComponent} from "../components/games/games.component";
 import {HumidityGameComponent} from "../components/games/humidity-game/humidity-game.component";
 import {MultipleChoiceGameComponent} from "../components/games/multiple-choice-game/multiple-choice-game.component";
 import {OrderGameComponent} from "../components/games/order-game/order-game.component";
+import {SharedTipsPageComponent} from "../components/tips/shared-tips-page/shared-tips-page.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},  // default route
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'games/multiple', component: MultipleChoiceGameComponent},
   {path: 'games/order', component: OrderGameComponent},
   {path: 'tips', component: TipsComponent},
+  {path: 'sharedTipsPage', component: SharedTipsPageComponent},
   {path: 'about', component: AboutComponent},
   // { path: '**', component: NotFoundComponent }  // wildcard route for 404 not found
 ];

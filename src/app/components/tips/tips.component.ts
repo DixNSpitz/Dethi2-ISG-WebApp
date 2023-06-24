@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Router} from "@angular/router";
+
+type InfoKey = 'tomato' | 'chili' | 'aloe' | 'illness' | 'fertilizer' | 'water';
 
 @Component({
   selector: 'app-tips',
@@ -7,9 +10,25 @@ import { Component } from '@angular/core';
 })
 export class TipsComponent {
 
-  routeToInfo(audioKey: string) {
-    // send request to server so audio plays
-    // make sure to implement some kind of buffer so that the server doesn't get overloaded
-    console.log('audio is playing for: ', audioKey);
+  tipScreenMap = {
+    'tomato': { 'tipScreenImageUrl': 'assets/screens/tomato.png', 'screenTitle': 'Tomate' },
+    'chili': { 'tipScreenImageUrl': 'assets/screens/chili.png', 'screenTitle': 'Chili' },
+    'aloe': { 'tipScreenImageUrl': 'assets/screens/aloe.png', 'screenTitle': 'Aloe' },
+    'illness': { 'tipScreenImageUrl': 'assets/screens/illness.png', 'screenTitle': 'Krankheit' },
+    'fertilizer': { 'tipScreenImageUrl': 'assets/screens/fertilizer.png', 'screenTitle': 'Dünger' },
+    'water': { 'tipScreenImageUrl': 'assets/screens/water.png', 'screenTitle': 'Wasser' },
+  }
+
+  constructor(private router: Router) {
+  }
+
+  routeToInfo(infoKey: InfoKey) {
+    this.router.navigate(['/sharedTipsPage'], {
+      queryParams: {
+        tipKey: infoKey,
+        tipScreenTitle: this.tipScreenMap[infoKey].screenTitle,
+        tipScreenImageUrl: this.tipScreenMap[infoKey].tipScreenImageUrl,
+      }
+    });
   }
 }
