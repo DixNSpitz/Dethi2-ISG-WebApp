@@ -1,1 +1,11 @@
-<p>shared-tips-page works!</p>
+<div class="container">
+  <app-header
+    imagePath="assets/LogoAlone.png"
+    textBold="Tipps für "
+    text=' "{{tipScreenTitle}}"'>
+  </app-header>
+
+  <img *ngIf="tipScreenImageUrl" src="{{tipScreenImageUrl}}" alt="Inhalt des Info Screens" class="tip-screen">
+
+  <app-back-button [routerLink]="'/tips'"></app-back-button>
+</div>

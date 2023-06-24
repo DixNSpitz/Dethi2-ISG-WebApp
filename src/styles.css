@@ -5,6 +5,7 @@ body {
   margin: 0;
   font-family: Manrope, sans-serif;
   overflow:hidden;
+  background-color: #f8f8f8;
 }
 
 html, body, app-root {
