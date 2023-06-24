@@ -5,60 +5,67 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
-.title {
-  text-align: center;
-}
-
-.plant-grid {
-  width: 100%;
+.vitals-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  flex: 1;
+  justify-content: space-between;
+  margin-bottom: 80px;
 }
 
-.grid-item {
-  padding: 20px;
-  border: 1px solid #ccc;
-  flex: 1;
-  background-color: #f2f2f2;
+.vital-item {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: stretch; /* Stretch the items to fill vertical space */
+  border: 1px solid #89C839;
+  border-radius: 10px 0 10px 0; /* Top left and bottom right corners rounded */
+  padding: 10px;
+  margin-bottom: 10px; /* Spacing between items */
 }
 
 .plant-name {
   font-size: 1.5em;
-  width: 150px;  /* Set a fixed width */
-  white-space: nowrap;  /* Prevent the text from wrapping */
-  overflow: hidden;  /* Hide any text that overflows the container */
-  text-overflow: ellipsis;  /* Add an ellipsis (...) when the text overflows */
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex; /* Enable flex layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding-right: 10px; /* Spacing between name and status */
 }
 
 .plant-status {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /* This line is changed to distribute the days equally */
   flex-grow: 1;
+  align-items: flex-start; /* Align the status items at the top */
+  width: calc(100% - 150px - 10px); /* Remaining space after accommodating the plant-name */
 }
-
 
 .status-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #ECECEC; /* Background color for status-item */
+  padding: 5px; /* Padding inside the status-item */
+  border-radius: 5px; /* Rounded corners for status-item */
+  text-align: center;
+}
+
+.status-smiley {
+  width: 50px;
 }
 
 .status-item span:first-child {
   font-size: 3em;
+  margin-bottom: 5px; /* Spacing between smiley and day name */
 }
 
-
-.button-container {
-  padding: 20px;
-  display: flex;
-  justify-content: flex-end;
+app-back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
-

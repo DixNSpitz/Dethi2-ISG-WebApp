@@ -11,7 +11,7 @@ import {Day} from "../../models/Day";
   styleUrls: ['./vitals.component.css']
 })
 export class VitalsComponent implements OnInit {
-  weekDays = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+  weekDays = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
   displayedDays: string[] = [];
   plants: Plant[] = [];
 

@@ -1,17 +1,20 @@
 <div class="container">
-  <h1 class="title">So geht es den Pflanzen</h1>
-  <div class="plant-grid" *ngIf="plants">
-    <div class="grid-item" *ngFor="let plant of plants">
+  <app-header
+    imagePath="assets/LogoAlone.png"
+    textBold="Pflanzen"
+    text="zustand"
+  ></app-header>
+  <div class="vitals-container" *ngIf="plants">
+    <div class="vital-item" *ngFor="let plant of plants">
       <span class="plant-name">{{plant.name}}</span>
       <div class="plant-status">
         <div class="status-item" *ngFor="let day of plant.days" (click)="openInfoDialog(day)">
-          <span>😊</span>
+          <img class="status-smiley" src="assets/status-smileys/Smiley_Positive.png" alt="Happy Smiley">
           <span>{{ day.name }}</span>
         </div>
       </div>
     </div>
   </div>
-  <div class="button-container">
-    <button mat-fab extended routerLink="/home">Zurück</button>
-  </div>
+  <app-back-button routerLink="/home">
+  </app-back-button>
 </div>
