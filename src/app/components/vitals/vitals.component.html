@@ -4,16 +4,22 @@
     textBold="Pflanzen"
     text="zustand"
   ></app-header>
-  <div class="vitals-container" *ngIf="plants">
-    <div class="vital-item" *ngFor="let plant of plants">
-      <span class="plant-name">{{plant.name}}</span>
-      <div class="plant-status">
-        <div class="status-item" *ngFor="let day of plant.days" (click)="openInfoDialog(day)">
-          <img class="status-smiley" src="assets/status-smileys/Smiley_Positive.png" alt="Happy Smiley">
-          <span>{{ dayNameOrToday(day.name) }}</span>
+  <div class="vitals-container">
+    <mat-spinner *ngIf="loading" class="loading-spinner"></mat-spinner>
+    <ng-container *ngIf="plants.length > 0 && !loading">
+      <div class="vital-item" *ngFor="let plant of plants">
+        <span class="plant-name">{{plant.name}}</span>
+        <div class="plant-status">
+          <div class="status-item" *ngFor="let day of plant.days" (click)="openInfoDialog(day)">
+            <img class="status-smiley" src="assets/status-smileys/Smiley_Positive.png" alt="Happy Smiley">
+            <span>{{ dayNameOrToday(day.name) }}</span>
+          </div>
         </div>
       </div>
-    </div>
+    </ng-container>
+  </div>
+  <div *ngIf="plants.length === 0 && !loading" class="status-item" style="height: 100px !important; align-self: center">
+    <p>Aktuell scheint es keine Pflanzen zu geben, oder ein Fehler ist aufgetreten!</p>
   </div>
   <app-back-button routerLink="/home">
   </app-back-button>

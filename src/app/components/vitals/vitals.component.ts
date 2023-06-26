@@ -12,6 +12,7 @@ import {Day} from "../../models/Day";
 })
 export class VitalsComponent implements OnInit {
   plants: Plant[] = [];
+  loading: boolean = true;
 
   constructor(
     private dialog: MatDialog,
@@ -22,6 +23,7 @@ export class VitalsComponent implements OnInit {
   ngOnInit(): void {
     this.vitalsService.getAllVitals().subscribe((plants: Plant[]) => {
       this.plants = plants;
+      this.loading = false;
     });
   };
 
