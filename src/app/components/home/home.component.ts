@@ -20,12 +20,7 @@ export class HomeComponent {
   }
 
   openInfoDialog() {
-    const rect = this.backButton.nativeElement.getBoundingClientRect();
-    const dialogPosition = { top: (rect.top - 100) + 'px', left: (rect.left + rect.width + 10) + 'px' };
-
-    this.dialog.open(InfoDialogComponent, {
-      position: dialogPosition
-    });
+        this.dialog.open(InfoDialogComponent);
   }
 
 }

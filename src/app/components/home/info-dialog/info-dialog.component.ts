@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {DialogRef} from "@angular/cdk/dialog";
 
 @Component({
   selector: 'app-info-dialog',
@@ -7,7 +8,10 @@ import { Component } from '@angular/core';
 })
 export class InfoDialogComponent {
 
-  close() {
+  constructor(public dialogRef: DialogRef) {
+  }
 
+  close() {
+    this.dialogRef.close();
   }
 }
