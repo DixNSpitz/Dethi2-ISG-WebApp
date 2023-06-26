@@ -21,11 +21,16 @@ export class VitalsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.vitalsService.getAllVitals().subscribe((plants: Plant[]) => {
-      this.plants = plants;
-      this.loading = false;
-    });
-  };
+    this.vitalsService.getAllVitals().subscribe(
+      (plants: Plant[]) => {
+        this.plants = plants;
+        this.loading = false;
+      },
+      () => {
+        this.loading = false;
+      }
+    );
+  }
 
   openInfoDialog(day: Day) {
     this.dialog.open(StatusInfoDialogComponent, {

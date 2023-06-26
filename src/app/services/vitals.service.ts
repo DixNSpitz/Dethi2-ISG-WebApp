@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Plant} from "../models/Plant";
-import {Observable} from "rxjs";
+import {catchError, Observable, of} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,10 @@ export class VitalsService {
   ) { }
 
   getAllVitals(): Observable<Plant[]> {
-    return this.http.get<Plant[]>('http://127.0.0.1:5000/vitals');
+    return this.http.get<Plant[]>('http://127.0.0.1:5000/vitals').pipe(
+      catchError(() => {
+        return of([]);
+      })
+    );
   };
 }
