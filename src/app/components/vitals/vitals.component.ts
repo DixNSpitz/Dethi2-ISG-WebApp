@@ -27,7 +27,13 @@ export class VitalsComponent implements OnInit {
 
   openInfoDialog(day: Day) {
     this.dialog.open(StatusInfoDialogComponent, {
-      data: {day: day}
+      // data: {day: day}
+      data: {
+        ...day,
+        temperature_value: 0,
+        light_value: 100,
+        water_value: 60
+      } as Day
     });
   }
 
