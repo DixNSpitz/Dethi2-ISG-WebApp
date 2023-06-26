@@ -11,8 +11,6 @@ import {Day} from "../../models/Day";
   styleUrls: ['./vitals.component.css']
 })
 export class VitalsComponent implements OnInit {
-  weekDays = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
-  displayedDays: string[] = [];
   plants: Plant[] = [];
 
   constructor(
@@ -22,10 +20,6 @@ export class VitalsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const today = new Date().getDay();
-    for (let i = 0; i < 7; i++) {
-      this.displayedDays.unshift(this.weekDays[(today - i + 7) % 7]);
-    }
     this.vitalsService.getAllVitals().subscribe((plants: Plant[]) => {
       this.plants = plants;
     });
@@ -37,5 +31,13 @@ export class VitalsComponent implements OnInit {
     });
   }
 
-
+  // return the name of the day 'Mo', 'Di'... or 'Heute', if it is today
+  dayNameOrToday(name: string | undefined): string {
+    const weekDays = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
+    if (name === weekDays[new Date().getDay()]) {
+      return 'Heute';
+    } else {
+      return name ? name : '';
+    }
+  }
 }

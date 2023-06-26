@@ -10,7 +10,7 @@
       <div class="plant-status">
         <div class="status-item" *ngFor="let day of plant.days" (click)="openInfoDialog(day)">
           <img class="status-smiley" src="assets/status-smileys/Smiley_Positive.png" alt="Happy Smiley">
-          <span>{{ day.name }}</span>
+          <span>{{ dayNameOrToday(day.name) }}</span>
         </div>
       </div>
     </div>
