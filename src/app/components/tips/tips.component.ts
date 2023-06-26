@@ -11,10 +11,10 @@ type InfoKey = 'tomato' | 'chili' | 'aloe' | 'illness' | 'fertilizer' | 'water';
 export class TipsComponent {
 
   tipScreenMap = {
-    'tomato': { 'tipScreenImageUrl': 'assets/screens/tomato.png', 'screenTitle': 'Tomate' },
-    'chili': { 'tipScreenImageUrl': 'assets/screens/chili.png', 'screenTitle': 'Chili' },
+    'tomato': { 'tipScreenImageUrl': 'assets/screens/tomato.png', 'screenTitle': 'Tomaten' },
+    'chili': { 'tipScreenImageUrl': 'assets/screens/chili.png', 'screenTitle': 'Chilis' },
     'aloe': { 'tipScreenImageUrl': 'assets/screens/aloe.png', 'screenTitle': 'Aloe' },
-    'illness': { 'tipScreenImageUrl': 'assets/screens/illness.png', 'screenTitle': 'Krankheit' },
+    'illness': { 'tipScreenImageUrl': 'assets/screens/illness.png', 'screenTitle': 'Krankheiten' },
     'fertilizer': { 'tipScreenImageUrl': 'assets/screens/fertilizer.png', 'screenTitle': 'Dünger' },
     'water': { 'tipScreenImageUrl': 'assets/screens/water.png', 'screenTitle': 'Wasser' },
   }
