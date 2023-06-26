@@ -21,7 +21,7 @@ export class GamesService {
     return this.http.post('http://127.0.0.1:5000/games', body, {headers: this.headers});
   }
 
-  getGameState() {
+  getGameState(): Observable<any> {
     return this.http.get('http://127.0.0.1:5000/games', {headers: this.headers});
   }
 }
