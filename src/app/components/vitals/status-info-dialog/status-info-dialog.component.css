@@ -5,28 +5,75 @@
   padding: 20px;
   border-radius: 10px;
   background-color: #f8f8f8;
-  max-width: 400px;
-  width: 100%;
+  width: 400px;
   box-sizing: border-box;
   overflow-y: auto;
 }
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.dialog-title {
+  font-size: 1.5em;
+  align-self: center;
+}
+
 .close-button {
   align-self: flex-end;
   color: #999;
 }
-.status-info {
+
+.status-box {
   display: flex;
-  align-items: center;
+  align-items: center; /* Vertically centers the children */
   margin: 10px 0;
-  font-size: 1.2em;
   width: 100%;
   border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
 }
+
+.img-container {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  border-radius: 10px 0 0 10px;
+  text-align: center;
+}
+
 .status-smiley {
-  font-size: 2em;
+  padding-top: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 10px 0 0 10px;
+}
+
+.progress-bar-container {
+  flex-grow: 1;
+  height: 20px;
+  background: #D7D7D7;
+  border-radius: 10px;
   margin-right: 20px;
 }
-.status-text {
-  flex-grow: 1;
+
+.progress-bar {
+  height: 100%;
+  border-radius: 10px;
+}
+
+
+#temperature {
+  background-color: #89C839;
+}
+
+#water {
+  background-color: #1592A6;
+}
+
+#sun {
+  background-color: #FFD23F;
 }

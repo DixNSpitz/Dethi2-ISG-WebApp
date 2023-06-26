@@ -1,17 +1,17 @@
 <div class="dialog-container">
-  <button mat-icon-button class="close-button" (click)="closeDialog()">
-    <mat-icon>close</mat-icon>
-  </button>
-  <div class="status-info">
-    <span class="status-smiley">{{ '😊' }}</span>
-    <span class="status-text">{{  data.day.water_value || "Keine Daten Gefunden"}} </span>
+  <div class="dialog-header">
+      <div class="dialog-title">Detailansicht</div>
+    <button mat-icon-button class="close-button" (click)="closeDialog()">
+      <mat-icon>close</mat-icon>
+    </button>
   </div>
-  <div class="status-info">
-    <span class="status-smiley">{{ '😐' }}</span>
-    <span class="status-text">{{ data.day.light_value || "Keine Daten Gefunden"}}</span>
-  </div>
-  <div class="status-info">
-    <span class="status-smiley">{{ '😊' }}</span>
-    <span class="status-text">{{ data.day.temperature_value || "Keine Daten Gefunden"}}</span>
+  <div class="status-box" *ngFor="let status of statusData">
+    <div class="img-container" [id]="status.id">
+      <img class="status-smiley" [src]="status.img" alt="Image of a smiley">
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-bar" [style.width.%]="calculateProgress(status.value)"
+           [style.background]="status.color"></div>
+    </div>
   </div>
 </div>
