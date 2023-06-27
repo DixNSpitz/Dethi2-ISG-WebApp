@@ -10,7 +10,7 @@
       <img class="status-smiley" [src]="status.img" alt="Image of a smiley">
     </div>
     <div class="progress-bar-container">
-      <div class="progress-bar" [style.width.%]="calculateProgress(status.value)"
+      <div class="progress-bar" [style.width.%]="calculateProgress(status.value, status.min, status.max)"
            [style.background]="status.color"></div>
     </div>
   </div>

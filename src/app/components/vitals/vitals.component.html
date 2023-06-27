@@ -10,8 +10,13 @@
       <div class="vital-item" *ngFor="let plant of plants">
         <span class="plant-name">{{plant.name}}</span>
         <div class="plant-status">
-          <div class="status-item" *ngFor="let day of plant.days" (click)="openInfoDialog(day)">
-            <img class="status-smiley" src="assets/status-smileys/Smiley_Positive.png" alt="Happy Smiley">
+          <div class="status-item" *ngFor="let day of plant.days" (click)="openInfoDialog(day, plant)">
+            <img *ngIf="day.mood === 'positive'" class="status-smiley" src="assets/status-smileys/Smiley_Positive.png"
+                 alt="Happy Smiley">
+            <img *ngIf="day.mood === 'sad'" class="status-smiley" src="assets/status-smileys/Smiley_Sa.png"
+                 alt="Sad Smiley">
+            <img *ngIf="day.mood === 'neutral'" class="status-smiley" src="assets/status-smileys/Smiley_Neutral.png"
+                 alt="Neutral Smiley">
             <span>{{ dayNameOrToday(day.name) }}</span>
           </div>
         </div>

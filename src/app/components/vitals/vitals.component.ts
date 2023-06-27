@@ -22,8 +22,19 @@ export class VitalsComponent implements OnInit {
 
   ngOnInit(): void {
     this.vitalsService.getAllVitals().subscribe(
-      (plants: Plant[]) => {
-        this.plants = plants;
+      (plants: any[]) => {
+        this.plants = plants.map(plant => {
+          let plantObj = Object.assign(new Plant(), plant);
+          if (plantObj.days) {
+            plantObj.days = plantObj.days.map((day: any) => {
+              let dayObj = Object.assign(new Day(), day);
+              dayObj.mood = plantObj.calculateDayMood(dayObj);
+              return dayObj;
+            });
+          }
+          return plantObj;
+        });
+        console.log(this.plants);
         this.loading = false;
       },
       () => {
@@ -32,15 +43,9 @@ export class VitalsComponent implements OnInit {
     );
   }
 
-  openInfoDialog(day: Day) {
+  openInfoDialog(day: Day, plant: Plant) {
     this.dialog.open(StatusInfoDialogComponent, {
-      // data: {day: day}
-      data: {
-        ...day,
-        temperature_value: 0,
-        light_value: 100,
-        water_value: 60
-      } as Day
+      data: {day, plant}
     });
   }
 

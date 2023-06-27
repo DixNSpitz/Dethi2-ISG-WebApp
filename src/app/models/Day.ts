@@ -4,4 +4,5 @@ export class Day {
   water_value: number | undefined;
   temperature_value: number | undefined;
   light_value: number | undefined;
+  mood: string | undefined;
 }
